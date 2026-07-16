@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_colors.dart';
+import 'package:islami/core/utils/app_images.dart';
 import 'package:islami/models/tab_info_model.dart';
 
 class MainLayout extends StatefulWidget {
@@ -12,34 +13,34 @@ class MainLayout extends StatefulWidget {
 class _MainLayoutState extends State<MainLayout> {
   List<TabInfoModel> tabs = [
     TabInfoModel(
-      iconPath: 'assets/icons/quran_ic.png',
+      iconPath: Assets.iconsQuranIc,
       label: 'Quran ic',
-      backgroundImage: 'assets/images/back_home_image.png',
+      backgroundImage: Assets.imagesBackHomeImage,
       content: Container(),
     ),
 
     TabInfoModel(
-      iconPath: 'assets/icons/headith.png',
+      iconPath: Assets.iconsHeadith,
       label: 'Hadith',
-      backgroundImage: 'assets/images/back_home_image.png',
+      backgroundImage: Assets.imagesBackHomeImage,
       content: Container(),
     ),
     TabInfoModel(
-      iconPath: 'assets/icons/ic_sebha.png',
+      iconPath: Assets.iconsIcSebha,
       label: 'Sebha',
-      backgroundImage: 'assets/images/back_home_image.png',
+      backgroundImage: Assets.imagesBackHomeImage,
       content: Container(),
     ),
     TabInfoModel(
-      iconPath: 'assets/icons/radio.png',
+      iconPath: Assets.iconsRadio,
       label: 'Radio',
-      backgroundImage: 'assets/images/back_home_image.png',
+      backgroundImage: Assets.imagesBackHomeImage,
       content: Container(),
     ),
     TabInfoModel(
-      iconPath: 'assets/icons/time.png',
+      iconPath: Assets.iconsTime,
       label: 'Time',
-      backgroundImage: 'assets/images/back_home_image.png',
+      backgroundImage: Assets.imagesBackHomeImage,
       content: Container(),
     ),
   ];
@@ -48,6 +49,10 @@ class _MainLayoutState extends State<MainLayout> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+      
+        body: Image.asset(tabs[selectedIndex].backgroundImage,fit: BoxFit.cover,
+          width: double.infinity,
+        ),
         bottomNavigationBar: NavigationBar(
           selectedIndex: selectedIndex,
           onDestinationSelected: (index) {
