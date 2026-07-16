@@ -22,7 +22,7 @@ class CustomTextField extends StatelessWidget {
         border: buildInputBorder(OutlineInputBorder()),
         hintText: hintText,
         hintStyle: TextStyle(
-          color: AppColors.hintTextColor,
+          color: AppColors.darkWhite,
           fontSize: 16,
           fontWeight: .bold,
         ),
