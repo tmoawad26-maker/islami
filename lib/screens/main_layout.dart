@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/core/utils/app_images.dart';
 import 'package:islami/models/tab_info_model.dart';
+import 'package:islami/tabs/quran_tab.dart';
 
 class MainLayout extends StatefulWidget {
   const MainLayout({super.key});
@@ -16,14 +17,14 @@ class _MainLayoutState extends State<MainLayout> {
       iconPath: Assets.iconsQuranIc,
       label: 'Quran ic',
       backgroundImage: Assets.imagesBackHomeImage,
-      content: Container(),
+      content: QuranTab()
     ),
 
     TabInfoModel(
       iconPath: Assets.iconsHeadith,
       label: 'Hadith',
       backgroundImage: Assets.imagesBackHomeImage,
-      content: Container(),
+      content: QuranTab()
     ),
     TabInfoModel(
       iconPath: Assets.iconsIcSebha,
@@ -50,8 +51,13 @@ class _MainLayoutState extends State<MainLayout> {
     return SafeArea(
       child: Scaffold(
       
-        body: Image.asset(tabs[selectedIndex].backgroundImage,fit: BoxFit.cover,
-          width: double.infinity,
+        body: Stack(
+          children: [
+            Image.asset(tabs[selectedIndex].backgroundImage,fit: BoxFit.cover,
+              width: double.infinity,
+            ),
+            QuranTab()
+          ],
         ),
         bottomNavigationBar: NavigationBar(
           selectedIndex: selectedIndex,
