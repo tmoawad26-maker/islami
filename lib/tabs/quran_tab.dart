@@ -3,6 +3,7 @@ import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/core/utils/app_images.dart';
 import 'package:islami/widgets/custom_text_field.dart';
 import 'package:islami/widgets/islami_logo_section.dart';
+import 'package:islami/widgets/search_sura_section.dart';
 
 class QuranTab extends StatelessWidget {
   const QuranTab({super.key});
@@ -16,12 +17,12 @@ class QuranTab extends StatelessWidget {
         children: [
           IslamiLogoSection(),
           SizedBox(height: 21,),
-          CustomTextField(hintText: 'Sura Name',
-          prefixIcon: ImageIcon(AssetImage(Assets.iconsQuranIc),color: AppColors.primaryColor,)
-          )
+          SearchSuraSection()
         ],
       ),
     );
   }
 }
+
+
 
