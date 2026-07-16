@@ -35,8 +35,6 @@ class Assets {
   /// assets/icons/time.png
   static const String iconsTime = "assets/icons/time.png";
 
-  
-
   /// Assets for images20xBackHomeImage2x
   /// assets/images/2.0x/back_home_image@2x.png
   static const String images20xBackHomeImage2x =
@@ -53,6 +51,10 @@ class Assets {
   /// Assets for imagesBackHomeImage
   /// assets/images/back_home_image.png
   static const String imagesBackHomeImage = "assets/images/back_home_image.png";
+
+  /// Assets for quran kareem image
+  static const String imagesQuranKareem =
+      "assets/images/quran_kareem_image.png";
 
   /// Assets for imagesBackgrondImage
   /// assets/images/backgrond_image.png
