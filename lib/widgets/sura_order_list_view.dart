@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami/models/sura_model.dart';
 import 'package:islami/widgets/custom_sura_search.dart';
 
 class SuraOrderListView extends StatelessWidget {
@@ -10,12 +11,12 @@ class SuraOrderListView extends StatelessWidget {
       physics: NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       itemBuilder: (context, index) {
-        return CustomSuraSearch();
+        return CustomSuraSearch(suraModel: SuraModel.suraModelList[index]);
       },
       separatorBuilder: (context, index) {
         return SizedBox(height: 10);
       },
-      itemCount: 5,
+      itemCount: SuraModel.suraModelList.length,
     );
   }
 }

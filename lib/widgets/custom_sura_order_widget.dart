@@ -4,27 +4,19 @@ import 'package:islami/core/utils/app_images.dart';
 import 'package:islami/core/utils/app_text_styles.dart';
 
 class CustomSuraOrderWidget extends StatelessWidget {
-  const CustomSuraOrderWidget({super.key});
-
+  const CustomSuraOrderWidget({super.key, required this.index});
+      final int index;
   @override
   Widget build(BuildContext context) {
     return Stack(
+      alignment: Alignment.center,
       children: [
         ImageIcon(
           AssetImage(Assets.imagesAyatImage),
           color: AppColors.white,
-          size: 50,
+          size: 52,
         ),
-        Positioned(
-          left: 0,
-          right: 0,
-          top: 0,
-          bottom: 0,
-          child: Align(
-            alignment: .center,
-            child: Text('1', style: AppTextStyles.textStyle20),
-          ),
-        ),
+        Text('$index', style: AppTextStyles.textStyle16),
       ],
     );
   }

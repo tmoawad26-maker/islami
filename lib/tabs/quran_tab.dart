@@ -10,6 +10,7 @@ class QuranTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
    var width = MediaQuery.sizeOf(context).width;
+   var height = MediaQuery.sizeOf(context).height;
     return Padding(
       padding:  EdgeInsets.symmetric(horizontal: width * .05),
       child: SingleChildScrollView(
