@@ -35,18 +35,13 @@ class Assets {
   /// assets/icons/time.png
   static const String iconsTime = "assets/icons/time.png";
 
-  /// Assets for images2
-  /// assets/images/2.0x
-  static const String images2 = "assets/images/2.0x";
-
   /// Assets for images20xBackHomeImage2x
   /// assets/images/2.0x/back_home_image@2x.png
   static const String images20xBackHomeImage2x =
       "assets/images/2.0x/back_home_image@2x.png";
 
-  /// Assets for images3
-  /// assets/images/3.0x
-  static const String images3 = "assets/images/3.0x";
+  /// Assets for islami image logo
+  static const imagesIslamiLogo = "assets/images/Islami_image.png";
 
   /// Assets for images30xBackHomeImage3x
   /// assets/images/3.0x/back_home_image@3x.png
@@ -56,6 +51,14 @@ class Assets {
   /// Assets for imagesBackHomeImage
   /// assets/images/back_home_image.png
   static const String imagesBackHomeImage = "assets/images/back_home_image.png";
+
+  /// Assets for quran kareem image
+  static const String imagesQuranKareem =
+      "assets/images/quran_kareem_image.png";
+
+  /// sura number image
+  static const String imagesAyatImage =
+      "assets/images/sura_number_image.png";
 
   /// Assets for imagesBackgrondImage
   /// assets/images/backgrond_image.png
