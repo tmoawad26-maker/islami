@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/core/utils/app_images.dart';
+import 'package:islami/core/utils/app_theme.dart';
 import 'package:islami/models/tab_info_model.dart';
 import 'package:islami/tabs/quran_tab.dart';
 
@@ -66,12 +67,7 @@ class _MainLayoutState extends State<MainLayout> {
               selectedIndex = index;
             });
           },
-          backgroundColor: AppColors.primaryColor,
-          indicatorColor: AppColors.darkBrown.withValues(alpha: .6),
-          labelTextStyle: WidgetStatePropertyAll(
-            TextStyle(color: AppColors.white),
-          ),
-          labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
+         
           destinations: List.generate(
             tabs.length,
             (index) => NavigationDestination(
@@ -81,7 +77,7 @@ class _MainLayoutState extends State<MainLayout> {
                 AssetImage(tabs[index].iconPath),
                 color: selectedIndex == index
                     ? AppColors.white
-                    : AppColors.darkBrown,
+                    : Theme.of(context).iconTheme.color,
               ),
             ),
           ),

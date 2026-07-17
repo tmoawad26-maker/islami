@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_routes.dart';
+import 'package:islami/core/utils/app_theme.dart';
 import 'package:islami/screens/main_layout.dart';
 
 class IslamiApp extends StatelessWidget {
@@ -10,9 +11,9 @@ class IslamiApp extends StatelessWidget {
     return  MaterialApp(
       title: 'Islami App',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        fontFamily: 'Janna LT'
-      ),
+      theme: AppTheme.darkTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: ThemeMode.dark,
       routes: {
         AppRoutes.mainLayoutRoute : (_) => MainLayout(),
       },
