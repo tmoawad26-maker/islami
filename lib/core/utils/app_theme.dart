@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_colors.dart';
 
 class AppTheme {
-  static ThemeData darkTheme = ThemeData(
+  static final  ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
     fontFamily: 'Janna LT',
     navigationBarTheme: NavigationBarThemeData(

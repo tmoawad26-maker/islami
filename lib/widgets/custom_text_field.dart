@@ -13,36 +13,33 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      cursorColor: AppColors.white,
+      cursorColor: AppColors.primaryColor,
       style: TextStyle(
         color: AppColors.white,
         fontSize: 16,
       ),
       decoration: InputDecoration(
-        border: buildInputBorder(OutlineInputBorder()),
+        border: buildInputBorder(),
         hintText: hintText,
         hintStyle: TextStyle(
           color: AppColors.darkWhite,
           fontSize: 16,
           fontWeight: .bold,
         ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(color: AppColors.white),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(color: AppColors.primaryColor),
-        ),
+        enabledBorder: buildInputBorder(),
+        focusedBorder: buildInputBorder(),
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
       ),
     );
   }
 
-  InputBorder buildInputBorder(InputBorder inputBorder) {
-    return inputBorder == OutlineInputBorder
-        ? OutlineInputBorder()
-        : UnderlineInputBorder();
+  OutlineInputBorder buildInputBorder() {
+    return OutlineInputBorder(
+        borderRadius: BorderRadius.circular(10),
+        borderSide: BorderSide(color: AppColors.primaryColor),
+      );
   }
+
+ 
 }
