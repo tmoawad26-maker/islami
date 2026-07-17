@@ -8,10 +8,14 @@ class MostRecentItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('Width of Screen = ${MediaQuery.sizeOf(context).width}');
+    print('Height of Screen = ${MediaQuery.sizeOf(context).height}');
+    var width = MediaQuery.sizeOf(context).width;
+    var height = MediaQuery.sizeOf(context).height;
     return Container(
       padding: EdgeInsets.only(left: 17.0),
-      width: 283,
-      height: 150,
+      width: width * .78,
+      height: height * .41,
       decoration: BoxDecoration(
         color: AppColors.primaryColor,
         borderRadius: BorderRadius.circular(20),
@@ -22,11 +26,11 @@ class MostRecentItem extends StatelessWidget {
           Column(
             crossAxisAlignment: .start,
             children: [
-              SizedBox(height: 17,),
+              SizedBox(height: height *.02,),
               Text('Al-Anbiya', style: AppTextStyles.textStyle24),
-              SizedBox(height: 10),
+              SizedBox(height: height * .02),
               Text('الأنبياء', style: AppTextStyles.textStyle24),
-              SizedBox(height: 10),
+              SizedBox(height: height * .02),
               Text(
                 '112 Verses',
                 style: AppTextStyles.textStyle14.copyWith(

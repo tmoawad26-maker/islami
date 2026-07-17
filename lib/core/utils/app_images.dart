@@ -56,6 +56,10 @@ class Assets {
   static const String imagesQuranKareem =
       "assets/images/quran_kareem_image.png";
 
+  /// sura number image
+  static const String imagesAyatImage =
+      "assets/images/sura_number_image.png";
+
   /// Assets for imagesBackgrondImage
   /// assets/images/backgrond_image.png
   static const String imagesBackgrondImage =

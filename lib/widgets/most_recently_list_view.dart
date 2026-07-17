@@ -6,14 +6,20 @@ class MostRecentlyListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
-      scrollDirection: Axis.horizontal,
-      itemBuilder: (context , index) {
-          return  MostRecentlySection();
-      }, 
-    separatorBuilder: (context, index) {
-      return  SizedBox(width: 10,);
-    },
-     itemCount: 5);
+    var height = MediaQuery.sizeOf(context).height;
+    return SizedBox(
+      height: height * .2,
+      child: ListView.separated(
+        scrollDirection: Axis.horizontal,
+        physics: PageScrollPhysics(),
+        itemBuilder: (context, index) {
+          return MostRecentlySection();
+        },
+        separatorBuilder: (context, index) {
+          return SizedBox(width: 10);
+        },
+        itemCount: 5,
+      ),
+    );
   }
 }

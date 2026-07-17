@@ -10,6 +10,9 @@ class IslamiApp extends StatelessWidget {
     return  MaterialApp(
       title: 'Islami App',
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        fontFamily: 'Janna LT'
+      ),
       routes: {
         AppRoutes.mainLayoutRoute : (_) => MainLayout(),
       },

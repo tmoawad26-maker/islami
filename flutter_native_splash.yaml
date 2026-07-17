@@ -16,4 +16,4 @@ flutter_native_splash:
     # icon_background_color_dark: "#121212"
     branding: assets/images/branding.png
 
-  web: false
+  web: true
