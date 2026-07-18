@@ -63,6 +63,8 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+    - assets/files/Suras/
+    - assets/files/Hadeeth/
 flutter_assets:
   assets_path:  assets/
   output_path: lib/core/utils/

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/core/utils/app_images.dart';
-import 'package:islami/core/utils/app_theme.dart';
 import 'package:islami/models/tab_info_model.dart';
-import 'package:islami/tabs/quran_tab.dart';
+import 'package:islami/tabs/quran_tab/quran_tab.dart';
 
 class MainLayout extends StatefulWidget {
   const MainLayout({super.key});

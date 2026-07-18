@@ -47,7 +47,12 @@ class Assets {
   /// assets/images/3.0x/back_home_image@3x.png
   static const String images30xBackHomeImage3x =
       "assets/images/3.0x/back_home_image@3x.png";
-
+      /// ASSets for images msq image
+      static const String imagesMsque = "assets/images/img_bottom_decoration.png";
+  /// ASSets for images left  corner
+  static const String imagesLeftCorner = "assets/images/img_left_corner.png";
+  /// ASSets for images right corner 
+  static const String imagesRightCorner = "assets/images/img_right_corner.png";
   /// Assets for imagesBackHomeImage
   /// assets/images/back_home_image.png
   static const String imagesBackHomeImage = "assets/images/back_home_image.png";
