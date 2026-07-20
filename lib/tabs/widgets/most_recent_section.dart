@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/core/utils/app_images.dart';
 import 'package:islami/core/utils/app_text_styles.dart';
+import 'package:islami/models/sura_model.dart';
 
-class MostRecentItem extends StatelessWidget {
-  const MostRecentItem({super.key});
-
+class MostRecentlySection extends StatelessWidget {
+  const MostRecentlySection({super.key, required this.suraModel});
+    final SuraModel suraModel;
   @override
   Widget build(BuildContext context) {
     print('Width of Screen = ${MediaQuery.sizeOf(context).width}');
@@ -15,7 +16,7 @@ class MostRecentItem extends StatelessWidget {
     return Container(
       padding: EdgeInsets.only(left: 17.0),
       width: width * .78,
-      height: height * .41,
+      height: height * .19,
       decoration: BoxDecoration(
         color: AppColors.primaryColor,
         borderRadius: BorderRadius.circular(20),
@@ -27,19 +28,19 @@ class MostRecentItem extends StatelessWidget {
             crossAxisAlignment: .start,
             children: [
               SizedBox(height: height *.02,),
-              Text('Al-Anbiya', style: AppTextStyles.textStyle24),
+              Text(suraModel.suraEnglish, style: AppTextStyles.textStyle24),
               SizedBox(height: height * .02),
-              Text('الأنبياء', style: AppTextStyles.textStyle24),
+              Text(suraModel.suraArabic, style: AppTextStyles.textStyle24),
               SizedBox(height: height * .02),
               Text(
-                '112 Verses',
+                '${suraModel.ayaNumber} Verses',
                 style: AppTextStyles.textStyle14.copyWith(
                   color: AppColors.darkBrown,
                 ),
               ),
             ],
           ),
-          Image.asset(Assets.imagesQuranKareem)
+          Expanded(child: Image.asset(Assets.imagesQuranKareem))
         ],
       ),
     );

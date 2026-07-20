@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:islami/tabs/widgets/most_recently_section.dart';
+import 'package:islami/models/sura_model.dart';
+import 'package:islami/tabs/widgets/most_recent_section.dart';
 
 class MostRecentlyListView extends StatelessWidget {
   const MostRecentlyListView({super.key});
@@ -8,12 +9,12 @@ class MostRecentlyListView extends StatelessWidget {
   Widget build(BuildContext context) {
     var height = MediaQuery.sizeOf(context).height;
     return SizedBox(
-      height: height * .2,
+      height: height * .19,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         physics: PageScrollPhysics(),
         itemBuilder: (context, index) {
-          return MostRecentlySection();
+          return MostRecentlySection(suraModel: SuraModel.suraModelList[index]);
         },
         separatorBuilder: (context, index) {
           return SizedBox(width: 10);
