@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:islami/core/resources/quran_resources.dart';
 import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/core/utils/app_images.dart';
 import 'package:islami/core/utils/app_text_styles.dart';
-import 'package:islami/models/sura_model.dart';
 
 class MostRecentlySection extends StatelessWidget {
-  const MostRecentlySection({super.key, required this.suraModel});
-    final SuraModel suraModel;
+  const MostRecentlySection({super.key, required this.index, required this.mostRecentList,});
+    final int index;
+    final  List<int> mostRecentList;
   @override
   Widget build(BuildContext context) {
     print('Width of Screen = ${MediaQuery.sizeOf(context).width}');
@@ -28,12 +29,12 @@ class MostRecentlySection extends StatelessWidget {
             crossAxisAlignment: .start,
             children: [
               SizedBox(height: height *.02,),
-              Text(suraModel.suraEnglish, style: AppTextStyles.textStyle24),
+              Text(QuranResources.surahNamesEnglish[mostRecentList[index]], style: AppTextStyles.textStyle24),
               SizedBox(height: height * .02),
-              Text(suraModel.suraArabic, style: AppTextStyles.textStyle24),
+              Text(QuranResources.surahNamesArabic[mostRecentList[index]], style: AppTextStyles.textStyle24),
               SizedBox(height: height * .02),
               Text(
-                '${suraModel.ayaNumber} Verses',
+                '${QuranResources.numberAyatQuran[mostRecentList[index]]} Verses',
                 style: AppTextStyles.textStyle14.copyWith(
                   color: AppColors.darkBrown,
                 ),

@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami/core/utils/app_images.dart';
 import 'package:islami/models/sura_model.dart';
+import 'package:islami/providers/most_recently_provider.dart';
 import 'package:islami/screens/sura_details/widgets/custom_sura_content_section.dart';
 import 'package:islami/widgets/custom_app_bar.dart';
 import 'package:islami/widgets/custom_sura_name_section.dart';
+import 'package:provider/provider.dart';
 
 class SuraDetailsScreen extends StatefulWidget {
   const SuraDetailsScreen({super.key});
@@ -24,6 +26,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
   }
   @override
   Widget build(BuildContext context) {
+    
     var height = MediaQuery.sizeOf(context).height;
     var width = MediaQuery.sizeOf(context).width;
      suraData = ModalRoute.of(context)!.settings.arguments as SuraModel;
@@ -58,7 +61,6 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
       
   }
   Future<void> readSuraFile(int index) async {
-   await  Future.delayed(Duration(seconds: 2));
     String suraLoad = await  rootBundle.loadString('assets/files/Suras/${index+1}.txt');
      List<String> suraContent =  suraLoad.trim().split("\n");    
     setState(() {
