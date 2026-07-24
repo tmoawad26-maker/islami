@@ -4,9 +4,14 @@ import 'package:islami/core/utils/app_images.dart';
 import 'package:islami/core/utils/app_text_styles.dart';
 
 class CustomSuraOrderWidget extends StatelessWidget {
-  const CustomSuraOrderWidget({super.key, required this.index, this.imageSize, this.padding});
-      final int index;
-      final double ? imageSize , padding;
+  const CustomSuraOrderWidget({
+    super.key,
+    required this.index,
+    this.imageSize,
+    this.padding,
+  });
+  final int index;
+  final double? imageSize, padding;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -18,7 +23,7 @@ class CustomSuraOrderWidget extends StatelessWidget {
           size: imageSize ?? 52,
         ),
         Padding(
-          padding:  EdgeInsets.all(padding ?? 8.0),
+          padding: EdgeInsets.all(padding ?? 8.0),
           child: Text('$index', style: AppTextStyles.textStyle16),
         ),
       ],
