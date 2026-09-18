@@ -31,7 +31,7 @@ class _CustomSuraContentSectionState extends State<CustomSuraContentSection> {
                 for (int i = 0; i < widget.suras.length; i++) ...[
                   TextSpan(
                     text: widget.suras[i],
-                    style: AppTextStyles.textStyle20.copyWith(
+                    style: AppTextStyles.textStyle20Bold.copyWith(
                       color: AppColors.primaryColor,
                     ),
                   ),

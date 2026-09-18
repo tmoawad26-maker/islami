@@ -5,6 +5,7 @@ import 'package:islami/core/utils/app_text_styles.dart';
 import 'package:islami/core/utils/app_theme.dart';
 import 'package:islami/providers/most_recently_provider.dart';
 import 'package:islami/screens/main_layout.dart';
+import 'package:islami/screens/on_boarding/on_boarding_screen.dart';
 import 'package:islami/screens/sura_details_screen.dart';
 import 'package:provider/provider.dart';
 
@@ -26,7 +27,7 @@ class IslamiApp extends StatelessWidget {
           color: AppColors.primaryColor,
         ),
         centerTitle: true,
-        titleTextStyle: AppTextStyles.textStyle20.copyWith(
+        titleTextStyle: AppTextStyles.textStyle20Bold.copyWith(
           color: AppColors.primaryColor,
         ),
           ),
@@ -35,9 +36,10 @@ class IslamiApp extends StatelessWidget {
         themeMode: ThemeMode.dark,
         routes: {
           AppRoutes.mainLayoutRoute : (_) => MainLayout(),
+          AppRoutes.onBoardingRoute: (_) => OnBoardingScreen(),
           AppRoutes.suraDetailsRoute : (_) => SuraDetailsScreen()
         },
-        initialRoute: AppRoutes.mainLayoutRoute,
+        initialRoute: AppRoutes.onBoardingRoute,
       ),
     );
   }

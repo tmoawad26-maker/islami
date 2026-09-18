@@ -19,12 +19,12 @@ class CustomSuraSearch extends StatelessWidget {
              Column(
             spacing: 8,
             children: [
-              Text(suraModel.suraEnglish,style: AppTextStyles.textStyle20,),
+              Text(suraModel.suraEnglish,style: AppTextStyles.textStyle20Bold,),
               Text('${suraModel.ayaNumber} Verses ',style: AppTextStyles.textStyle14,),
             ],
           ),
           Spacer(),
-          Text(suraModel.suraArabic,style: AppTextStyles.textStyle20,)
+          Text(suraModel.suraArabic,style: AppTextStyles.textStyle20Bold,)
           ],
         ),
          Divider(color: AppColors.darkWhite,)
