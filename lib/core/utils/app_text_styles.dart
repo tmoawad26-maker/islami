@@ -12,12 +12,12 @@ abstract class AppTextStyles {
     color: AppColors.white,
     fontWeight: .bold,
   );
-  static const textStyle16 = TextStyle(
+  static const textStyle16Bold = TextStyle(
     fontSize: 16,
     color: AppColors.darkWhite,
     fontWeight: .bold,
   );
-  static const textStyle20 = TextStyle(
+  static const textStyle20Bold = TextStyle(
     fontSize: 20,
     color: AppColors.white,
     fontWeight: .bold,

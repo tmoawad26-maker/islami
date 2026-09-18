@@ -1,7 +1,7 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
 class CachedData {
-  static const String mostRecentkey = 'most-recent';
+  static const String mostRecentlyKey = 'most-recent';
 
   static Future<void> saveMostRecentlySura(int newIndex) async {
     final SharedPreferences sharedPreferences =
@@ -9,11 +9,11 @@ class CachedData {
 
     List<String> mostRecentlyList;
     try {
-      mostRecentlyList = sharedPreferences.getStringList(mostRecentkey) ?? [];
+      mostRecentlyList = sharedPreferences.getStringList(mostRecentlyKey) ?? [];
       print(mostRecentlyList);
     } catch (e) {
       // clears corrupted value left from the old buggy save call
-      await sharedPreferences.remove(mostRecentkey);
+      await sharedPreferences.remove(mostRecentlyKey);
       mostRecentlyList = [];
       print(mostRecentlyList);
     }
@@ -30,14 +30,14 @@ class CachedData {
       mostRecentlyList.removeLast(); // optional cap
     }
 
-    await sharedPreferences.setStringList(mostRecentkey, mostRecentlyList);
+    await sharedPreferences.setStringList(mostRecentlyKey, mostRecentlyList);
   }
 
   static Future<List<int>> getMostRecentlyList() async {
     final SharedPreferences sharedPreferences =
         await SharedPreferences.getInstance();
     List<String> mostRecentlyAsString =
-        sharedPreferences.getStringList(mostRecentkey) ?? [];
+        sharedPreferences.getStringList(mostRecentlyKey) ?? [];
     List<int> mostRecentlyAsInt = mostRecentlyAsString
         .map((element) => int.parse(element))
         .toList();

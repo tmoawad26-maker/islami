@@ -24,7 +24,7 @@ class CustomSuraOrderWidget extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsets.all(padding ?? 8.0),
-          child: Text('$index', style: AppTextStyles.textStyle16),
+          child: Text('$index', style: AppTextStyles.textStyle16Bold),
         ),
       ],
     );

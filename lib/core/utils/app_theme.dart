@@ -12,7 +12,7 @@ class AppTheme {
         color: AppColors.primaryColor,
       ),
       centerTitle: true,
-      titleTextStyle: AppTextStyles.textStyle20.copyWith(
+      titleTextStyle: AppTextStyles.textStyle20Bold.copyWith(
         color: AppColors.primaryColor,
       ),
     ),

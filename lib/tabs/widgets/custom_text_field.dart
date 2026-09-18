@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_colors.dart';
 
-class CustomTextField extends StatelessWidget {
-  const CustomTextField({
+class SearchFieldSection extends StatelessWidget {
+  const SearchFieldSection({
     super.key,
     this.prefixIcon,
     this.suffixIcon,
     required this.hintText,
+    this.onChanged
   });
   final Widget? prefixIcon, suffixIcon;
   final String hintText;
+  final ValueChanged<String?>? onChanged;
   @override
   Widget build(BuildContext context) {
     return TextField(
       cursorColor: AppColors.primaryColor,
+      onChanged: onChanged,
       style: TextStyle(
         color: AppColors.white,
         fontSize: 16,
